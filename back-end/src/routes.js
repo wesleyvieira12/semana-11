@@ -6,12 +6,12 @@ const IncidentsController = require("./controllers/IncidentsController");
 
 const routes = express.Router();
 
-routes.get('/sessions', SessionController.create);
+routes.post('/sessions', SessionController.create);
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
 
-routes.post('/profile', ProfileController.index);
+routes.get('/profile', ProfileController.index);
 
 routes.get('/incidents', IncidentsController.index);
 routes.post('/incidents', IncidentsController.create);
